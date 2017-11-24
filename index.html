@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Demo 1</title>
+</head>
+<body>
+	<div class="redes">
+		<span class="icon-facebook" onclick="alert('DEMO!!');" title="Facebook"></span>
+		<span class="icon-twitter" onclick="alert('DEMO!!');" title="Twitter"></span>
+		<span class="icon-instagram" onclick="alert('DEMO!!');" title="Instagram"></span>
+	</div>
+	<div class="header">
+		<div class="logo"></div>
+		<div class="icon-menu">
+			<div class="bar-1"></div>
+			<div class="bar-2"></div>
+			<div class="bar-3"></div>
+		</div>
+		<div class="links">
+			<a href="#">Link #1</a>
+			<a href="#">Link #2</a>
+			<a href="#">Link #3</a>
+			<a href="#">Link #4</a>
+			<a href="#">Link #5</a>
+		</div>
+	</div>
+	<div class="banner"></div>
+	<div class="contenido-total">
+		<div class="sidebar">
+			<aside>
+				<h2>Categorías</h2>
+				<a href="#">Categoría #1</a>
+				<a href="#">Categoría #2</a>
+				<a href="#">Categoría #3</a>
+			</aside>
+
+			<aside>
+				<h2>Publicidad</h2>
+				<a href="https://www.github.com" target="_blank"><img src="assets/img/publicidad.png" alt="Github Commits"></a>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique nihil sunt iste officia!</p>
+			</aside>
+		</div>
+		<div class="contenido-principal">
+			<div class="articulo">
+				<h2>Lorem ipsum dolor sit amet.</h2>
+				<hr/>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ipsam iure quam aperiam ipsum dolores saepe recusandae velit facilis in quas fuga molestias eos, provident nemo obcaecati unde itaque, necessitatibus adipisci quod beatae. Dolore quod recusandae a harum, veritatis laboriosam ex rerum optio adipisci nulla quos saepe vero odio. Quod labore consectetur, asperiores saepe suscipit similique dolorem, esse accusamus? Nesciunt.</p>
+			</div>
+
+			<div class="articulo">
+				<h2>Lorem ipsum dolor sit amet.</h2>
+				<hr/>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ipsam iure quam aperiam ipsum dolores saepe recusandae velit facilis in quas fuga molestias eos, provident nemo obcaecati unde itaque, necessitatibus adipisci quod beatae. Dolore quod recusandae a harum, veritatis laboriosam ex rerum optio adipisci nulla quos saepe vero odio. Quod labore consectetur, asperiores saepe suscipit similique dolorem, esse accusamus? Nesciunt.</p>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="up">Subir</div> -->
+	<div class="footer">&copy; 2017.</div>
+	<link href="assets/css/fontello.css" rel="stylesheet"/>
+	<link href="assets/css/style.css" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+	<script src="assets/js/jquery-latest.min.js"></script>
+	<script async src="assets/js/scroll.js"></script>
+	<!-- <script async src="assets/js/up.js"></script> -->
+	<script>
+		// Parallax
+		console.log('estilos cargados');
+		var banner = document.querySelector('.banner');
+		$(window).scroll(function() {
+			banner.style.backgroundPosition = 'center -' + (window.scrollY * 0.30) + 'px';
+		});
+
+		// Menú
+		var icono = $('.icon-menu'),
+			menu = $('.links');
+
+		$(icono).click(function(){
+			$(menu).toggleClass('click-menu');
+			$('.bar-1').toggleClass('rotate-1');
+			$('.bar-2').toggleClass('rotate-2');
+			$('.bar-3').toggleClass('kick-bar');
+		});
+
+
+	</script>
+</body>
+</html>
